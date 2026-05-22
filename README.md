@@ -21,5 +21,6 @@
 **记得写好commit。**
 
 ## To-Do List & 分工
+- [ ] 主函数 by WJC
 - [ ] 简单转置 by WJC
 - [ ] 分块转置 by ZCX
