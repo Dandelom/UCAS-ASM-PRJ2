@@ -1,0 +1,6 @@
+# 锁定所有 .s 汇编文件在工作区和 Git 仓库中均使用 LF 换行符
+*.s text eol=lf
+
+# 锁定所有 .c 和 .h 文件在工作区中使用 CRLF 换行符
+*.c text eol=crlf
+*.h text eol=crlf

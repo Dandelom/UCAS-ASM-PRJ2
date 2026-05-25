@@ -26,6 +26,6 @@ int main()
     }
     free(row_buffer);
     fclose(fp);
-    printf("Generate successfully\n");
+    printf("Generate successfully.\n");
     return 0;
 }
