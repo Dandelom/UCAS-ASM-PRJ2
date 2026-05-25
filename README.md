@@ -25,6 +25,6 @@
 ## To-Do List & 分工
 - [x] 主函数 by WJC
 - [x] 简单转置 by WJC
-- [ ] 分块转置 by ZCX
+- [x] 分块转置 by ZCX
 - [ ] 4×4 SIMD 转置 by HYH
 - [ ] 8×8 AVX 转置 by HYH
