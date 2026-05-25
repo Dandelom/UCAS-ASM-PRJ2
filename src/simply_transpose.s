@@ -6,7 +6,6 @@
 simply_transpose:
 	pushl 	%ebp
 	movl	%esp, %ebp
-	pushl	%ebx
 	pushl	%esi
 	pushl	%edi
 	movl	8(%ebp), %esi	# esi <= matrix
@@ -45,6 +44,5 @@ Lplus:
 L3:
 	popl	%edi
 	popl	%esi
-	popl	%ebx
 	popl	%ebp
 	ret

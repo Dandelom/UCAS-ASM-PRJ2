@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#define SIZE 4096
-
-extern void simply_transpose(float *m);
+#include "myhead.h"
 
 int main()
 {
@@ -29,8 +27,9 @@ int main()
     int number;
     printf("Please choose transpose method:\n");
     printf("1. Simply transpose\n");
+    printf("2. Blockwise transpose\n");
     scanf("%d", &number);
-    if(!(number >= 1 && number <= 1))
+    if(!(number >= 1 && number <= 2))
     {
         perror("Illgal input.");
         return -1;
@@ -40,9 +39,10 @@ int main()
 
     startTime=clock();
     if(number == 1) simply_transpose(matrix);
+    else if(number == 2) blockwise_transpose(matrix);
     endTime=clock();
-    double simplyTime=(double)(endTime-startTime)/CLOCKS_PER_SEC;
-    printf("Simply transpose time:%.4f s\n", simplyTime);
+    double t=(double)(endTime-startTime)/CLOCKS_PER_SEC;
+    printf("Time:%f s\n", t);
     fwrite(matrix, sizeof(float), elementNum, ofp);
     fclose(ofp);
     printf("Output successfully.\n");
