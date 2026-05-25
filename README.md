@@ -26,5 +26,5 @@
 - [x] 主函数 by WJC
 - [x] 简单转置 by WJC
 - [x] 分块转置 by ZCX
-- [ ] 4×4 SIMD 转置 by HYH
-- [ ] 8×8 AVX 转置 by HYH
+- [x] 4×4 SIMD 转置 by HYH
+- [x] 8×8 AVX 转置 by HYH

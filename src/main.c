@@ -28,8 +28,10 @@ int main()
     printf("Please choose transpose method:\n");
     printf("1. Simply transpose\n");
     printf("2. Blockwise transpose\n");
+    printf("3. 4x4 SIMD transpose\n");
+    printf("4. 8x8 AVX transpose\n");
     scanf("%d", &number);
-    if(!(number >= 1 && number <= 2))
+    if(!(number >= 1 && number <= 4))
     {
         perror("Illgal input.");
         return -1;
@@ -40,6 +42,8 @@ int main()
     startTime=clock();
     if(number == 1) simply_transpose(matrix);
     else if(number == 2) blockwise_transpose(matrix);
+    else if(number == 3) simd_transpose(matrix);
+    else if(number == 4) avx_transpose(matrix);
     endTime=clock();
     double t=(double)(endTime-startTime)/CLOCKS_PER_SEC;
     printf("Time:%f s\n", t);
