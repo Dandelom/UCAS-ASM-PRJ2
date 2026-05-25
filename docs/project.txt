@@ -1,0 +1,7 @@
+项目详细说明：
+src 文件夹下的 generate.c 生成测试样例（存放在 tests/matrix_data.bin），check.c 比较 matrix_data.bin 和 output_data.bin 并输出转置是否成功。
+当前的 output_data.bin 的生成逻辑是不新申请内存空间，在原位对输入数据进行转置后输出。
+加入新的加速方法到 main.c 时按照当前逻辑修改输入提示、非法输入判断和方法选择，不要改变文件名。对 main.c 其他内容的修改请在群里讨论。
+tests 文件夹下为输入数据和输出数据。
+.gitignore 配置的是不将本地的 bin 文件夹上传（内含 c 文件的编译输出的可执行程序）。
+.gitattributes 配置的是换行符逻辑，由于我采用 Windows 下的 Git 并在 Linux 环境下通过共享文件夹开发，所以汇编文件的换行符为 LF，在 .gitattributes 中避免 Git 将其转换为 CRLF。

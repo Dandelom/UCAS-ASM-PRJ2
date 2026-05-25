@@ -18,11 +18,13 @@
 
 算法时间、加速比统一在实验报告里讨论。
 
+其他细节详见 docs 文件夹下的项目说明文档。
+
 **记得写好commit。**
 
 ## To-Do List & 分工
-- [ ] 主函数 by WJC
-- [ ] 简单转置 by WJC
+- [x] 主函数 by WJC
+- [x] 简单转置 by WJC
 - [ ] 分块转置 by ZCX
 - [ ] 4×4 SIMD 转置 by HYH
 - [ ] 8×8 AVX 转置 by HYH
