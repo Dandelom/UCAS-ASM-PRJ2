@@ -1,10 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include "myhead.h"
 #define SIZE 4096
-
-void simd_transpose(float *m);
-void avx_transpose(float *m);
 
 int main()
 {
@@ -27,13 +25,15 @@ int main()
     printf("Please choose transpose method:\n");
     printf("3. 4x4 SIMD transpose\n");
     printf("4. 8x8 AVX transpose\n");
+    printf("5. AVX + prefetch transpose\n");
     scanf("%d", &number);
     
-    if(!(number == 3 || number == 4)) { perror("Illegal input."); return -1; }
+    if(!(number == 3 || number == 4 || number == 5)) { perror("Illegal input."); return -1; }
     
     startTime=clock();
     if(number == 3) simd_transpose(matrix);
     else if(number == 4) avx_transpose(matrix);
+    else if(number == 5) avx_prefetch(matrix);
     endTime=clock();
     
     double t=(double)(endTime-startTime)/CLOCKS_PER_SEC;
